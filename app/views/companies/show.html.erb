@@ -1,1 +1,29 @@
 <%# TODO: company details page %>
+
+<h1> <%= @company["name"]%> </h1>
+
+<h2> <%= @company["city"]%>, <%= @company["state"]%> </h2>
+
+
+<p><a href="/companies">Back to All Companies</a></p>
+
+<h3>Contacts</h3>
+
+<ul>
+  <% for contact in @contacts %>
+    <li><%= contact["last_name"] %>, <%= contact["first_name"] %></li>
+  <% end %>
+</ul>
+
+<p>
+  <a href="/contacts/new?company_id=<%= @company.id %>">New contact for <%= @company.name %></a>
+</p>
+
+<p><%= button_to "Delete this company", @company, :method => "delete" %></p>
+
+
+
+
+
+
+
