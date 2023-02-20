@@ -19,6 +19,10 @@
   <a href="/contacts/new?company_id=<%= @company.id %>">New contact for <%= @company.name %></a>
 </p>
 
+<p>
+  <a href="/companies/<%= @company.id %>/edit">Edit</a>
+</p>
+
 <p><%= button_to "Delete this company", @company, :method => "delete" %></p>
 
 
